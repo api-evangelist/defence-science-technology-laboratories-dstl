@@ -1,23 +1,78 @@
 aid: defence-science-technology-laboratories-dstl
+
 name: Defence Science & Technology Laboratories (Dstl)
-description: 'Defence Science & Technology Laboratories (Dstl) is a company surfaced via the API Evangelist
-  harvest backlog (source: vc-portfolio) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Defence Science & Technology Laboratories (Dstl) is the UK government’s dedicated research and development organisation for defence and security. It delivers scientific and technological innovation to support national security, works with industry and academia, and publishes research, data and APIs across a range of domains including cyber, AI, and advanced materials.'
+
 url: https://raw.githubusercontent.com/api-evangelist/defence-science-technology-laboratories-dstl/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-23'
+
 modified: '2026-10-23'
+
 tags:
-- Company
-apis: []
+- defence
+- research
+- technology
+- government
+- UK
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://assets.publishing.service.gov.uk/media/6791021120bce57216a2f17a/Dstl_delivering_mission_success_960x640.png
+
 common:
+- type: Hosts
+  url: hosts/defence-science-technology-laboratories-dstl-hosts.yml
+- type: Vendors
+  url: vendors/defence-science-technology-laboratories-dstl-vendors.yml
+- type: SDKs
+  url: packages/defence-science-technology-laboratories-dstl-packages.yml
+- type: Packages
+  url: packages/defence-science-technology-laboratories-dstl-packages.yml
+- type: TermsOfService
+  url: https://www.gov.uk/help/terms-conditions
+- type: Support
+  url: https://www.gov.uk/help
+- type: PrivacyPolicy
+  url: https://www.gov.uk/help/privacy-notice
+- type: Newsroom
+  url: http://www.dstl.gov.uk/news
+- type: Documentation
+  url: http://www.dstl.gov.uk/athena/docs/mod%20athena%20leaflet.pdf
+- type: GitHubOrganization
+  url: https://github.com/dstl
+- type: DomainSecurity
+  url: security/defence-science-technology-laboratories-dstl-domain-security.yml
 - type: Website
   url: http://www.dstl.gov.uk
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website does not publish any machine‑readable API specifications.
+  evidence:
+    - url: https://www.gov.uk/government/organisations/defence-science-and-technology-laboratory
+      status: 200
+  checked: '2026-10-23'
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

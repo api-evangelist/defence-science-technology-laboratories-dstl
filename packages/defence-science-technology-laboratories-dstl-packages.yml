@@ -1,0 +1,16 @@
+generated: '2026-10-23'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io) ; github.com/dstl
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (dstl.gov.uk,
+  security/defence-science-technology-laboratories-dstl-domain-security.yml, www.gov.uk) or its accepted GitHub org (dstl).'
+packages:
+- name: Apex-SAPIENT-Middleware
+  registry: github
+  url: https://github.com/dstl/Apex-SAPIENT-Middleware
+  language: Python
+  official: true
+  version: null
+  published: '2024-08-28'
+  source_repo: https://github.com/dstl/Apex-SAPIENT-Middleware
+  evidence: repository in github.com/dstl, whose profile names the provider's domain

@@ -1,0 +1,62 @@
+generated: '2026-10-23'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 1
+  other_domain: 2
+  platform: 1
+  roles:
+  - api
+  - source
+  - support
+  - website
+hosts:
+- host: api.gov.uk
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.gov.uk
+  role: api
+  relation: other-domain
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: www.dstl.gov.uk
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Newsroom
+  - Documentation
+  - Website
+  serves:
+  - cdn
+  vendor: fastly
+  registrable_domain: dstl.gov.uk
+  role: website
+  relation: own
+- host: www.gov.uk
+  found_by:
+  - pointer
+  - docs-index
+  types:
+  - TermsOfService
+  - Support
+  - PrivacyPolicy
+  serves:
+  - docs
+  registrable_domain: www.gov.uk
+  role: support
+  relation: other-domain
